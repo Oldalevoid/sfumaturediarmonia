@@ -1,0 +1,98 @@
+/*
+ * ============================================================
+ *  SITO ARMONIA — Riferimento Font e Colori
+ *  Documento di riferimento per il webmaster
+ * ============================================================
+ *
+ *  FONT UTILIZZATI
+ *  ---------------
+ *  Importazione da Google Fonts:
+ *  Cormorant SC      → titoli principali
+ *  Cormorant Garamond → testi correnti (normale + italic)
+ *
+ *  Includere nel <head> di ogni pagina:
+ *
+ *  <link rel="preconnect" href="https://fonts.googleapis.com">
+ *  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ *  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+ *
+ *
+ *  COLORI PRINCIPALI
+ *  -----------------
+ *  Sfumatura home (sfondo):
+ *    #E6E6E4  →  grigio chiaro di fondo
+ *    #E8B5AC  →  rosa principale
+ *    #EED2C8  →  rosa chiaro
+ *
+ *  Testi:
+ *    #5F5B5A  →  grigio scuro per i testi correnti
+ *    #83606A  →  rosa/grigio per i titoli secondari
+ *
+ *
+ *  TITOLO GRECO DEL SITO
+ *  ---------------------
+ *  ἁρμονία
+ *
+ * ============================================================
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500;600&display=swap');
+
+/* ── Variabili CSS ── */
+:root {
+  /* Font */
+  --font-titolo:   'Cormorant SC', serif;
+  --font-testo:    'Cormorant Garamond', serif;
+
+  /* Colori sfondo */
+  --colore-grigio-fondo:  #E6E6E4;
+  --colore-rosa-principale: #E8B5AC;
+  --colore-rosa-chiaro:   #EED2C8;
+
+  /* Colori testo */
+  --colore-testo:          #5F5B5A;
+  --colore-titolo-secondario: #83606A;
+
+  /* Sfumatura home */
+  --gradiente-home: linear-gradient(
+    135deg,
+    #E6E6E4 0%,
+    #EED2C8 45%,
+    #E8B5AC 100%
+  );
+}
+
+/* ── Classi di esempio ── */
+
+/* Titolo principale (Cormorant SC) */
+.titolo {
+  font-family: var(--font-titolo);
+  font-weight: 400;
+  color: var(--colore-titolo-secondario);
+  letter-spacing: 0.08em;
+}
+
+/* Titolo secondario */
+.titolo-secondario {
+  font-family: var(--font-titolo);
+  font-weight: 300;
+  color: var(--colore-titolo-secondario);
+  letter-spacing: 0.06em;
+}
+
+/* Testo corrente */
+.testo {
+  font-family: var(--font-testo);
+  font-weight: 400;
+  color: var(--colore-testo);
+  line-height: 1.8;
+}
+
+/* Testo in corsivo */
+.testo-italic {
+  font-family: var(--font-testo);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--colore-testo);
+  line-height: 1.8;
+}
