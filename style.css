@@ -212,7 +212,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.12em;
-  color: var(--colore-testo);
+  color: var(--colore-titoli-sec);
   text-decoration: none;
   /* Sfumatura esatta: bianco caldo → rosa leggerissimo */
   background: linear-gradient(
@@ -220,7 +220,7 @@ body {
     rgba(255, 250, 248, 0.38) 0%,
     rgba(232, 181, 172, 0.22) 100%
   );
-  border: 1px solid rgba(131, 96, 106, 0.32);
+  border: 1.5px solid rgba(131, 96, 106, 0.55);
   border-radius: 50px;
   padding: 9px 28px 8px;
   backdrop-filter: blur(2px);
