@@ -119,7 +119,7 @@
 /* ── Testo corrente ── */
 .cs-testo {
   font-family: var(--font-testo);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(0.95rem, 1.5vw, 1.08rem);
   color: var(--colore-testo);
   line-height: 1.85;
@@ -203,7 +203,7 @@
 .cs-versi {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(0.95rem, 1.5vw, 1.08rem);
   color: var(--colore-testo);
   line-height: 1;

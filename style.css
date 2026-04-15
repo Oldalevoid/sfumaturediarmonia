@@ -270,7 +270,7 @@ body {
 ══════════════════════════════════════════════ */
 #servizi {
   background-image:
-    linear-gradient(rgba(230, 228, 226, 0.55), rgba(230, 228, 226, 0.55)),
+    linear-gradient(rgba(235, 232, 229, 0.78), rgba(235, 232, 229, 0.78)),
     url('img/sfondo-servizi.png');
   padding: 72px 8% 80px;
   display: flex;
@@ -310,7 +310,7 @@ body {
 .servizio p {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(0.92rem, 1.4vw, 1.08rem);
   color: var(--colore-testo);
   line-height: 1.78;
@@ -326,7 +326,7 @@ body {
 ══════════════════════════════════════════════ */
 #benessere {
   background-image:
-    linear-gradient(rgba(230, 228, 226, 0.52), rgba(230, 228, 226, 0.52)),
+    linear-gradient(rgba(235, 232, 229, 0.75), rgba(235, 232, 229, 0.75)),
     url('img/sfondo-benessere.png');
   padding: 72px 8% 80px;
   display: flex;
@@ -361,7 +361,7 @@ body {
 .benessere-poesia p {
   font-family: var(--font-titolo);
   font-size: clamp(0.78rem, 1.25vw, 1rem);
-  font-weight: 300;
+  font-weight: 500;
   color: var(--colore-testo);
   letter-spacing: 0.14em;
   line-height: 1.9;
@@ -400,7 +400,7 @@ body {
 .benessere-servizio p {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(0.92rem, 1.4vw, 1.08rem);
   color: var(--colore-testo);
   line-height: 1.78;
