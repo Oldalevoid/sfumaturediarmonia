@@ -324,6 +324,10 @@ body {
    HOME — SEZIONE 3: ORIENTARSI AL BENESSERE
    Sfondo: img/sfondo-benessere.png
 ══════════════════════════════════════════════ */
+#benessere .sez-titolo-centro {
+  color: var(--colore-titoli-sec);
+}
+
 #benessere {
   background-image:
     linear-gradient(rgba(235, 232, 229, 0.75), rgba(235, 232, 229, 0.75)),
