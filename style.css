@@ -3,31 +3,31 @@
 /* ══════════════════════════════════════════════
    RESET & BASE
 ══════════════════════════════════════════════ */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --font-titolo:              'Crimson Pro', serif;
-  --font-testo:               'Crimson Pro', serif;
+  --font:                  'Crimson Pro', serif;
 
-  /* Palette calda */
-  --grigio-fondo:             #EDE7E1;
-  --rosa-principale:          #E8B5AC;
-  --rosa-chiaro:              #EED2C8;
-  --colore-testo:             #4A3F3C;
-  --colore-titoli-sec:        #7A4A58;
+  --grigio-fondo:          #EDE7E1;
+  --rosa-principale:       #E8B5AC;
+  --rosa-chiaro:           #EED2C8;
+  --colore-testo:          #4A3F3C;
+  --colore-titoli-sec:     #7A4A58;
+  --overlay-caldo:         rgba(242, 234, 226, 0.72);
 
-  /* Overlay caldo sulle sezioni */
-  --overlay-caldo:            rgba(242, 234, 226, 0.72);
+  /* Scala tipografica unica */
+  --sz-xs:   clamp(0.8rem,  1vw,    0.9rem);   /* tag, label */
+  --sz-sm:   clamp(0.9rem,  1.2vw,  1rem);     /* bottoni, secondario */
+  --sz-base: clamp(1.05rem, 1.55vw, 1.2rem);   /* corpo testo, servizi */
+  --sz-md:   clamp(1.2rem,  1.8vw,  1.4rem);   /* titoli servizi, destra-titolo */
+  --sz-lg:   clamp(1.5rem,  2.2vw,  1.8rem);   /* descrizione hero */
+  --sz-xl:   clamp(2.8rem,  6vw,    5.2rem);   /* ἁρμονία */
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-testo);
+  font-family: var(--font);
   color: var(--colore-testo);
   background-color: var(--grigio-fondo);
   overflow-x: hidden;
@@ -37,11 +37,11 @@ body {
    ANIMAZIONI
 ══════════════════════════════════════════════ */
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-18px); }
+  from { opacity: 0; transform: translateY(-16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeIn {
@@ -49,16 +49,16 @@ body {
   to   { opacity: 1; }
 }
 
-.hero-greco      { animation: fadeInDown 1.2s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.1s; }
+.hero-greco        { animation: fadeInDown 1.2s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.1s; }
 .hero-trascrizione { animation: fadeInDown 1.1s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.3s; }
-.hero-sottotitolo-sc { animation: fadeInDown 1.1s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.48s; }
-.hero-descrizione  { animation: fadeInUp  1.2s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.65s; }
-.hero-nav          { animation: fadeInUp  1.1s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.85s; }
-.hero-destra       { animation: fadeIn    1.3s ease both; animation-delay: 0.9s; }
+.hero-sottotitolo-sc { animation: fadeInDown 1.1s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.46s; }
+.hero-descrizione  { animation: fadeInUp   1.2s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.62s; }
+.hero-nav          { animation: fadeInUp   1.1s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.82s; }
+.hero-destra       { animation: fadeIn     1.3s ease both;                         animation-delay: 0.88s; }
 
 .da-animare {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(28px);
   transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1),
               transform 0.85s cubic-bezier(0.22,1,0.36,1);
 }
@@ -68,7 +68,6 @@ body {
    SEZIONE BASE
 ══════════════════════════════════════════════ */
 .pagina {
-  position: relative;
   width: 100%;
   min-height: 100vh;
   background-color: var(--grigio-fondo);
@@ -85,74 +84,72 @@ body {
   background-image: url('img/sfondo-hero.png');
   display: flex;
   flex-direction: column;
-  padding: 5.5vh 8% 6vh;
+  padding: 5vh 8% 7vh;
   min-height: 100vh;
   min-height: 100svh;
 }
 
+/* ── Blocco titolo centrale ── */
 .hero-centro {
   text-align: center;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
 }
 
 .hero-greco {
-  font-family: var(--font-testo);
-  font-style: normal;
+  font-size: var(--sz-xl);
   font-weight: 300;
-  font-size: clamp(3rem, 7vw, 6rem);
-  color: rgba(122, 74, 88, 0.38);
+  color: rgba(122, 74, 88, 0.32);
   letter-spacing: 0.02em;
   line-height: 1;
   display: block;
 }
 
 .hero-trascrizione {
-  font-family: var(--font-titolo);
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-size: var(--sz-sm);
   font-weight: 400;
   font-variant: small-caps;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.3em;
+  letter-spacing: 0.32em;
   margin-top: 10px;
   display: block;
 }
 
 .hero-sottotitolo-sc {
-  font-family: var(--font-titolo);
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-size: var(--sz-base);
   font-weight: 400;
   font-variant: small-caps;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.25em;
-  margin-top: 7px;
+  letter-spacing: 0.24em;
+  margin-top: 6px;
   display: block;
 }
 
+/* ── Corpo: descrizione in alto, riga inferiore in basso ── */
 .hero-corpo {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4vh;
-  padding-bottom: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 8vh;
 }
 
 .hero-descrizione {
-  font-family: var(--font-testo);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  font-size: var(--sz-lg);
   color: var(--colore-testo);
-  line-height: 1.7;
-  max-width: 520px;
+  line-height: 1.68;
+  max-width: 48%;   /* resta nella metà sinistra, allineata al bordo */
 }
 
+/* ── Riga inferiore ── */
 .hero-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
   gap: 40px;
-  padding: 0 6%;
+  /* nessun padding extra: usa già i margini di #hero */
 }
 
 /* Bottoni pill */
@@ -161,60 +158,61 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 13px;
+  gap: 11px;
 }
 
 .hero-nav li a {
   display: inline-block;
-  font-family: var(--font-titolo);
-  font-size: 1rem;
+  font-size: var(--sz-sm);
   font-weight: 400;
-  letter-spacing: 0.13em;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
   color: var(--colore-titoli-sec);
   text-decoration: none;
   background: linear-gradient(160deg,
-    rgba(255, 248, 244, 0.42) 0%,
-    rgba(232, 181, 172, 0.26) 100%
+    rgba(255, 248, 244, 0.4) 0%,
+    rgba(232, 181, 172, 0.24) 100%
   );
-  border: 1.5px solid rgba(122, 74, 88, 0.45);
+  border: 1.5px solid rgba(122, 74, 88, 0.42);
   border-radius: 50px;
-  padding: 9px 28px 8px;
+  padding: 8px 26px 7px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, border-color 0.3s;
 }
 
 .hero-nav li a:hover {
   background: linear-gradient(160deg,
-    rgba(232, 181, 172, 0.5) 0%,
-    rgba(238, 210, 200, 0.4) 100%
+    rgba(232, 181, 172, 0.48) 0%,
+    rgba(238, 210, 200, 0.38) 100%
   );
-  border-color: rgba(122, 74, 88, 0.7);
+  border-color: rgba(122, 74, 88, 0.68);
 }
 
+/* Testo destra */
 .hero-destra {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 11px;
+  gap: 9px;
 }
 
 .hero-destra-titolo {
-  font-family: var(--font-titolo);
-  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-size: var(--sz-md);
   font-weight: 400;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.06em;
+  line-height: 1.3;
 }
 
 .hero-destra-riga {
-  font-family: var(--font-titolo);
-  font-size: clamp(0.72rem, 1.1vw, 0.88rem);
-  font-weight: 300;
+  font-size: var(--sz-xs);
+  font-weight: 400;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ══════════════════════════════════════════════
@@ -224,7 +222,7 @@ body {
   background-image:
     linear-gradient(var(--overlay-caldo), var(--overlay-caldo)),
     url('img/sfondo-servizi.png');
-  padding: 86px 8% 96px;
+  padding: 88px 8% 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,40 +234,37 @@ body {
 }
 
 .sez-titolo-centro {
-  font-family: var(--font-titolo);
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-size: var(--sz-md);
   font-weight: 400;
   font-variant: small-caps;
   color: var(--colore-testo);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-align: center;
-  margin-bottom: 68px;
+  margin-bottom: 64px;
 }
 
 .griglia-servizi {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 88px;
-  row-gap: 56px;
+  row-gap: 52px;
   width: 100%;
   max-width: 1100px;
 }
 
 .servizio h3 {
-  font-family: var(--font-titolo);
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  font-weight: 500;
+  font-size: var(--sz-md);
+  font-weight: 400;          /* small-caps dà già peso visivo sufficiente */
   font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.07em;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .servizio p {
-  font-family: var(--font-testo);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  font-size: var(--sz-base);
   color: var(--colore-testo);
   line-height: 1.9;
 }
@@ -283,7 +278,7 @@ body {
   background-image:
     linear-gradient(var(--overlay-caldo), var(--overlay-caldo)),
     url('img/sfondo-benessere.png');
-  padding: 86px 8% 96px;
+  padding: 88px 8% 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,7 +293,6 @@ body {
   margin-top: 16px;
 }
 
-/* Poesia sinistra */
 .benessere-poesia {
   display: flex;
   flex-direction: column;
@@ -310,55 +304,48 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
 }
 
 .benessere-poesia p {
-  font-family: var(--font-titolo);
-  font-size: clamp(0.88rem, 1.35vw, 1.08rem);
+  font-size: var(--sz-xs);
   font-weight: 400;
   color: var(--colore-testo);
-  letter-spacing: 0.14em;
-  line-height: 2;
-  margin-bottom: 0;
+  letter-spacing: 0.16em;
+  line-height: 2.1;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .benessere-autore {
-  font-family: var(--font-testo);
   font-style: italic;
-  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  font-size: var(--sz-sm);
   color: var(--colore-titoli-sec);
   letter-spacing: 0.06em;
-  margin-top: 16px;
+  margin-top: 14px;
   align-self: flex-end;
 }
 
-/* Contenuto destra */
 .benessere-contenuto {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 46px;
   justify-content: center;
 }
 
 .benessere-servizio h3 {
-  font-family: var(--font-titolo);
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  font-weight: 500;
+  font-size: var(--sz-md);
+  font-weight: 400;
   font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.07em;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   text-align: right;
 }
 
 .benessere-servizio p {
-  font-family: var(--font-testo);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  font-size: var(--sz-base);
   color: var(--colore-testo);
   line-height: 1.9;
   text-align: right;
@@ -368,7 +355,7 @@ body {
    FOOTER
 ══════════════════════════════════════════════ */
 footer {
-  padding: 48px 8%;
+  padding: 46px 8%;
   background-color: var(--grigio-fondo);
   border-top: 1px solid var(--rosa-chiaro);
   display: flex;
@@ -379,17 +366,16 @@ footer {
 }
 
 .footer-brand {
-  font-family: var(--font-titolo);
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: var(--sz-sm);
+  font-weight: 400;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
 .footer-info {
-  font-family: var(--font-testo);
   font-style: italic;
-  font-size: 1rem;
+  font-size: var(--sz-sm);
   color: var(--colore-testo);
   text-align: right;
   line-height: 1.7;
@@ -399,20 +385,15 @@ footer {
    RESPONSIVE
 ══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  #hero { padding: 52px 6% 60px; }
+  #hero { padding: 5vh 6% 7vh; }
   .griglia-servizi { column-gap: 52px; }
+  .hero-descrizione { max-width: 55%; }
 }
 
 @media (max-width: 768px) {
-  #hero {
-    padding: 48px 7% 52px;
-    min-height: 100svh;
-  }
-  .hero-bottom {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 0;
-  }
+  #hero { padding: 48px 7% 52px; min-height: 100svh; }
+  .hero-descrizione { max-width: 100%; }
+  .hero-bottom { grid-template-columns: 1fr; gap: 28px; }
   .hero-destra { align-items: flex-start; }
   .griglia-servizi { grid-template-columns: 1fr; column-gap: 0; row-gap: 40px; }
   .servizio.col-sinistra { grid-column: 1; }
@@ -426,7 +407,5 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .hero-greco { font-size: clamp(2.4rem, 12vw, 3.5rem); }
-  .hero-trascrizione, .hero-sottotitolo-sc { letter-spacing: 0.24em; }
   .hero-nav li a { font-size: 0.88rem; padding: 7px 20px 6px; }
 }
