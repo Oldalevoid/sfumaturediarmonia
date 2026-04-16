@@ -1,20 +1,20 @@
 /* ══════════════════════════════════════════════
-   CHI SIAMO — Stile segnalibro
-   Sfondo: img/sfondo-chi-siamo.png
-   (immagine verticale: splash destra + rosa basso-sinistra)
+   CHI SIAMO — Layout immersivo e caldo
+   Sfondo verticale: img/sfondo-chi-siamo.png
 ══════════════════════════════════════════════ */
 
-/* ── Pagina ── */
+:root {
+  --cs-max: 780px;
+  --cs-warm-bg: rgba(245, 238, 231, 0.88);
+}
+
+/* ── Pagina base ── */
 .pagina-cs {
-  background-color: #eee9e6;
-  background-image: url('img/sfondo-chi-siamo.png');
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
+  background-color: #EDE7E1;
   min-height: 100vh;
 }
 
-/* ── Nav minimale ── */
+/* ── Nav ── */
 .nav-cs {
   position: fixed;
   top: 0;
@@ -24,91 +24,139 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 7%;
-  background: rgba(230, 228, 226, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  padding: 20px 7%;
+  background: rgba(237, 231, 225, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(232, 181, 172, 0.25);
 }
 
 .nav-cs-brand {
   font-family: var(--font-testo);
   font-style: italic;
   font-weight: 300;
-  font-size: 1.3rem;
-  color: #7b7573;
+  font-size: 1.4rem;
+  color: rgba(122, 74, 88, 0.5);
   text-decoration: none;
   letter-spacing: 0.02em;
 }
 
 .nav-cs-back {
   font-family: var(--font-titolo);
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 0.18em;
-  color: var(--colore-testo);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--colore-titoli-sec);
   text-decoration: none;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.25s;
 }
 
-.nav-cs-back:hover {
-  opacity: 1;
-  color: var(--colore-titoli-sec);
-}
+.nav-cs-back:hover { opacity: 1; }
 
 /* ══════════════════════════════════════════════
-   SEGNALIBRO — colonna centrata
+   HERO VISIVO — sfondo pieno, testo centrato
 ══════════════════════════════════════════════ */
-.segnalibro {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 120px 28px 80px;
+.cs-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('img/sfondo-chi-siamo.png');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 120px 8% 80px;
 }
 
-/* ── Intestazione ── */
-.cs-header {
-  margin-bottom: 48px;
+/* Velo caldo sopra l'immagine */
+.cs-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(242, 234, 224, 0.52);
+  pointer-events: none;
 }
 
-.cs-greco {
+.cs-hero > * { position: relative; z-index: 1; }
+
+.cs-hero-greco {
   display: block;
   font-family: var(--font-testo);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(2.8rem, 6vw, 4.2rem);
-  color: #7b7573;
-  letter-spacing: 0.01em;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: rgba(122, 74, 88, 0.42);
+  letter-spacing: 0.02em;
   line-height: 1;
-  margin-bottom: 14px;
-  animation: fadeInDown 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  margin-bottom: 18px;
+  animation: fadeInDown 1.2s cubic-bezier(0.22,1,0.36,1) both;
   animation-delay: 0.1s;
 }
 
-.cs-titolo-sezione {
+.cs-hero-titolo {
   font-family: var(--font-titolo);
-  font-size: clamp(0.72rem, 1.3vw, 0.9rem);
+  font-size: clamp(0.82rem, 1.5vw, 1.1rem);
   font-weight: 400;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.28em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  animation: fadeInDown 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  margin-bottom: 36px;
+  animation: fadeInDown 1.1s cubic-bezier(0.22,1,0.36,1) both;
   animation-delay: 0.3s;
 }
 
-/* ── Blocco contenuto ── */
-.cs-blocco {
-  margin-bottom: 56px;
+.cs-hero-desc {
+  font-family: var(--font-testo);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  color: var(--colore-testo);
+  line-height: 1.7;
+  max-width: 680px;
+  animation: fadeInUp 1.2s cubic-bezier(0.22,1,0.36,1) both;
+  animation-delay: 0.5s;
 }
 
-/* ── Domanda d'apertura ── */
+/* ══════════════════════════════════════════════
+   CORPO — sezione calda con testo ampio
+══════════════════════════════════════════════ */
+.cs-corpo {
+  background-color: #EDE7E1;
+  padding: 96px 0 80px;
+}
+
+/* Contenitore centrato */
+.cs-contenuto {
+  max-width: var(--cs-max);
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+/* ── Intestazione sezione ── */
+.cs-sez-label {
+  font-family: var(--font-titolo);
+  font-size: clamp(0.72rem, 1.2vw, 0.88rem);
+  font-weight: 400;
+  color: var(--colore-titoli-sec);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-bottom: 56px;
+  display: block;
+}
+
+/* ── Domanda apertura ── */
 .cs-domanda {
   font-family: var(--font-testo);
   font-weight: 400;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: clamp(1.15rem, 2vw, 1.38rem);
   color: var(--colore-testo);
-  line-height: 1.75;
-  margin-bottom: 32px;
+  line-height: 1.85;
+  margin-bottom: 40px;
 }
 
 .cs-domanda em {
@@ -119,11 +167,11 @@
 /* ── Testo corrente ── */
 .cs-testo {
   font-family: var(--font-testo);
-  font-weight: 500;
-  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   color: var(--colore-testo);
-  line-height: 1.85;
-  margin-bottom: 22px;
+  line-height: 2;
+  margin-bottom: 28px;
 }
 
 .cs-testo em {
@@ -136,104 +184,120 @@
   font-family: var(--font-testo);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   color: var(--colore-titoli-sec);
   letter-spacing: 0.02em;
-  margin: 28px 0 28px;
+  margin: 36px 0;
   line-height: 1;
+  display: block;
 }
 
 /* ── Citazione ── */
 .cs-citazione {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 300;
-  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   color: var(--colore-titoli-sec);
-  line-height: 1.9;
-  margin: 32px auto;
-  max-width: 520px;
+  line-height: 1.95;
+  margin: 40px auto;
+  max-width: 600px;
   border: none;
-  padding: 0;
+  padding: 32px 0;
+  border-top: 1px solid rgba(232, 181, 172, 0.5);
+  border-bottom: 1px solid rgba(232, 181, 172, 0.5);
 }
 
 .cs-citazione cite {
   display: block;
   font-family: var(--font-titolo);
   font-style: normal;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
   color: var(--colore-testo);
-  margin-top: 10px;
-  opacity: 0.7;
+  margin-top: 14px;
+  opacity: 0.65;
 }
 
 /* ── Chiusura sezione ── */
 .cs-chiusura {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 300;
-  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   color: var(--colore-titoli-sec);
-  line-height: 1.65;
-  margin: 36px 0;
+  line-height: 1.7;
+  margin: 44px 0;
 }
 
-/* ── Nome dottoressa ── */
+/* ── Divisore ornamentale ── */
+.cs-divisore {
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(to bottom, transparent, var(--rosa-principale), transparent);
+  margin: 72px auto;
+}
+
+/* ── Nome professionista ── */
 .cs-nome {
   font-family: var(--font-titolo);
-  font-size: clamp(0.9rem, 1.6vw, 1.15rem);
-  font-weight: 400;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  font-weight: 500;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.14em;
-  margin-bottom: 28px;
+  letter-spacing: 0.16em;
+  margin-bottom: 36px;
+  display: block;
+}
+
+/* ── Sezione bio — layout con linea laterale ── */
+.cs-bio {
+  text-align: left;
+  border-left: 2px solid rgba(232, 181, 172, 0.6);
+  padding-left: 36px;
+  margin-bottom: 36px;
+}
+
+.cs-bio .cs-testo {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  text-align: left;
 }
 
 /* ── Autore poesia ── */
 .cs-autore {
   font-family: var(--font-testo);
   font-style: italic;
-  font-size: 0.95rem;
-  color: var(--colore-testo);
-  opacity: 0.65;
-  margin-bottom: 32px;
+  font-size: 1rem;
+  color: var(--colore-titoli-sec);
+  opacity: 0.75;
+  margin-bottom: 36px;
+  display: block;
 }
 
 /* ── Versi poesia ── */
 .cs-versi {
   font-family: var(--font-testo);
   font-style: italic;
-  font-weight: 500;
-  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
   color: var(--colore-testo);
   line-height: 1;
+  text-align: center;
 }
 
-.cs-versi p {
-  margin-bottom: 14px;
-}
-
-/* ── Divisore ornamentale ── */
-.cs-divisore {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, transparent, var(--rosa-principale), transparent);
-  margin: 0 auto 56px;
-}
+.cs-versi p { margin-bottom: 16px; }
 
 /* ── Fine pagina ── */
 .cs-fine {
   text-align: center;
-  padding: 20px 0 40px;
+  padding: 40px 0 20px;
 }
 
 .cs-greco-small {
   font-family: var(--font-testo);
   font-style: italic;
   font-weight: 300;
-  font-size: 1.6rem;
-  color: #7b7573;
-  opacity: 0.5;
+  font-size: 2rem;
+  color: rgba(122, 74, 88, 0.28);
   letter-spacing: 0.02em;
 }
 
@@ -241,21 +305,14 @@
    RESPONSIVE
 ══════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .segnalibro {
-    padding: 100px 20px 60px;
-  }
-
-  .pagina-cs {
-    background-attachment: scroll;
-  }
+  .cs-hero { padding: 100px 7% 64px; }
+  .cs-contenuto { padding: 0 24px; }
+  .cs-corpo { padding: 72px 0 60px; }
+  .cs-bio { padding-left: 22px; }
 }
 
 @media (max-width: 480px) {
-  .cs-greco {
-    font-size: 2.4rem;
-  }
-
-  .cs-parola-chiave {
-    font-size: 1.6rem;
-  }
+  .cs-hero-greco { font-size: 3rem; }
+  .cs-parola-chiave { font-size: 2rem; }
+  .cs-chiusura { font-size: 1.3rem; }
 }
