@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+SC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 
 /* ══════════════════════════════════════════════
    RESET & BASE
@@ -10,8 +10,8 @@
 }
 
 :root {
-  --font-titolo:              'Cormorant SC', serif;
-  --font-testo:               'Cormorant Garamond', serif;
+  --font-titolo:              'Crimson Pro', serif;
+  --font-testo:               'Crimson Pro', serif;
 
   /* Palette calda */
   --grigio-fondo:             #EDE7E1;
@@ -108,20 +108,22 @@ body {
 
 .hero-trascrizione {
   font-family: var(--font-titolo);
-  font-size: clamp(0.8rem, 1.4vw, 1.05rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
   font-weight: 400;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   margin-top: 10px;
   display: block;
 }
 
 .hero-sottotitolo-sc {
   font-family: var(--font-titolo);
-  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
   font-weight: 400;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
-  letter-spacing: 0.38em;
+  letter-spacing: 0.25em;
   margin-top: 7px;
   display: block;
 }
@@ -237,6 +239,7 @@ body {
   font-family: var(--font-titolo);
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 400;
+  font-variant: small-caps;
   color: var(--colore-testo);
   letter-spacing: 0.16em;
   text-align: center;
@@ -256,6 +259,7 @@ body {
   font-family: var(--font-titolo);
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 500;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.07em;
   margin-bottom: 13px;
@@ -343,6 +347,7 @@ body {
   font-family: var(--font-titolo);
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 500;
+  font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.07em;
   margin-bottom: 13px;
