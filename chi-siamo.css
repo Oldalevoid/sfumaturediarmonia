@@ -103,7 +103,7 @@
    2. FILOSOFIA — narrativa centrata, calda
 ══════════════════════════════════════════════ */
 .cs-filosofia {
-  background: linear-gradient(175deg, #F5E9DF 0%, #EDD0C2 50%, #F5E9DF 100%);
+  background: linear-gradient(180deg, #F6EAE0 0%, #EDCFBE 100%);
   padding: 100px 0 80px;
 }
 
@@ -192,7 +192,7 @@
    3. PROFESSIONISTE — lettere personali
 ══════════════════════════════════════════════ */
 .cs-professioniste {
-  background: linear-gradient(195deg, #F0E3D7 0%, #E8D0C0 40%, #EDD8CB 70%, #F0E3D7 100%);
+  background: linear-gradient(180deg, #EDCFBE 0%, #F6EAE0 100%);
   padding: 96px 7%;
 }
 
@@ -279,7 +279,7 @@
    4. POESIA — pagina di libro
 ══════════════════════════════════════════════ */
 .cs-poesia {
-  background: linear-gradient(185deg, #F7EBE0 0%, #EDD3C3 35%, #F3DECE 65%, #F7EBE0 100%);
+  background: linear-gradient(180deg, #F6EAE0 0%, #EDCFBE 100%);
   padding: 96px 7%;
   text-align: center;
 }
