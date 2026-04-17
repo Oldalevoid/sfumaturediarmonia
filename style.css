@@ -176,7 +176,7 @@ body {
   );
   border: 2.5px solid rgba(176, 80, 96, 0.62);
   border-radius: 50px;
-  padding: 13px 36px 12px;
+  padding: 9px 36px 8px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   transition: background 0.3s, border-color 0.3s;
