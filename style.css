@@ -404,8 +404,8 @@ footer {
   .hero-destra-titolo { font-size: 1.2rem; }
   .hero-destra-riga { font-size: 0.82rem; }
 
+  #servizi, #benessere { min-height: auto; padding: 68px 7% 76px; }
   .griglia-servizi { column-gap: 44px; }
-  #servizi, #benessere { padding: 68px 7% 76px; }
   .sez-titolo-centro { margin-bottom: 48px; }
 }
 
@@ -422,8 +422,8 @@ footer {
   .hero-destra-titolo { font-size: 1.45rem; }
   .hero-destra-riga { font-size: 0.9rem; }
 
+  #servizi, #benessere { min-height: auto; padding: 76px 7% 84px; }
   .griglia-servizi { column-gap: 56px; }
-  #servizi, #benessere { padding: 76px 7% 84px; }
   .sez-titolo-centro { margin-bottom: 52px; }
 }
 
@@ -441,7 +441,7 @@ footer {
   .benessere-servizio p { text-align: left; }
   footer { flex-direction: column; align-items: flex-start; }
   .footer-info { text-align: left; }
-  #servizi, #benessere { padding: 64px 7% 72px; }
+  #servizi, #benessere { min-height: auto; padding: 64px 7% 72px; }
 }
 
 @media (max-width: 480px) {
