@@ -429,6 +429,7 @@ footer {
 
 @media (max-width: 768px) {
   #hero { padding: 48px 7% 52px; min-height: 100svh; }
+  .hero-corpo { justify-content: flex-start; gap: 48px; padding-bottom: 0; }
   .hero-descrizione { max-width: 100%; }
   .hero-bottom { grid-template-columns: 1fr; gap: 28px; }
   .hero-destra { align-items: flex-start; }
