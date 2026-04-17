@@ -404,6 +404,7 @@ footer {
   .hero-destra-titolo { font-size: 1.2rem; }
   .hero-destra-riga { font-size: 0.82rem; }
 
+  #hero { min-height: auto; }
   #servizi, #benessere { min-height: auto; padding: 68px 7% 76px; }
   .griglia-servizi { column-gap: 44px; }
   .sez-titolo-centro { margin-bottom: 48px; }
@@ -411,7 +412,7 @@ footer {
 
 /* ── iPad Pro landscape + piccoli laptop (1025px – 1366px) ── */
 @media (min-width: 1025px) and (max-width: 1366px) {
-  #hero { padding: 5vh 7% 6vh; }
+  #hero { padding: 5vh 7% 6vh; min-height: auto; }
   .hero-corpo { justify-content: flex-start; gap: 60px; padding-top: 4vh; padding-bottom: 0; }
   .hero-descrizione { max-width: 54%; }
 
@@ -428,7 +429,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #hero { padding: 48px 7% 52px; min-height: 100svh; }
+  #hero { padding: 48px 7% 64px; min-height: auto; }
   .hero-corpo { justify-content: flex-start; gap: 48px; padding-bottom: 0; }
   .hero-descrizione { max-width: 100%; }
   .hero-bottom { grid-template-columns: 1fr; gap: 28px; }
