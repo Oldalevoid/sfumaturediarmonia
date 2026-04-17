@@ -394,7 +394,7 @@ footer {
 /* ── Tablet landscape + iPad Pro piccolo (769px – 1024px) ── */
 @media (min-width: 769px) and (max-width: 1024px) {
   #hero { padding: 5vh 6% 5vh; }
-  .hero-corpo { padding-top: 3vh; padding-bottom: 4vh; }
+  .hero-corpo { justify-content: flex-start; gap: 52px; padding-top: 3vh; padding-bottom: 0; }
   .hero-descrizione { max-width: 62%; }
 
   .hero-bottom { gap: 24px; }
@@ -412,7 +412,7 @@ footer {
 /* ── iPad Pro landscape + piccoli laptop (1025px – 1366px) ── */
 @media (min-width: 1025px) and (max-width: 1366px) {
   #hero { padding: 5vh 7% 6vh; }
-  .hero-corpo { padding-top: 4vh; padding-bottom: 6vh; }
+  .hero-corpo { justify-content: flex-start; gap: 60px; padding-top: 4vh; padding-bottom: 0; }
   .hero-descrizione { max-width: 54%; }
 
   .hero-bottom { gap: 36px; align-items: center; }
