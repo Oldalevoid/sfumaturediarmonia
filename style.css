@@ -422,6 +422,18 @@ footer {
   .griglia-servizi   { max-width: 1260px; column-gap: 100px; }
   .benessere-griglia { max-width: 1260px; gap: 72px; }
   .hero-descrizione  { max-width: 46%; }
+
+  /* Bottom hero: bottoni e testo destra */
+  .hero-bottom       { gap: 64px; align-items: center; }
+  .hero-nav          { gap: 18px; }
+  .hero-nav li a {
+    font-size: 1.15rem;
+    padding: 14px 48px 13px;
+    letter-spacing: 0.18em;
+  }
+  .hero-destra       { gap: 14px; }
+  .hero-destra-titolo { font-size: 1.75rem; }
+  .hero-destra-riga   { font-size: 1rem; letter-spacing: 0.14em; }
 }
 
 /* ── Schermi 21"+ (≥1920px) ── */
@@ -449,6 +461,18 @@ footer {
 
   .sez-titolo-centro { margin-bottom: 80px; }
   .hero-descrizione  { max-width: 44%; }
+
+  /* Bottom hero: bottoni e testo destra */
+  .hero-bottom       { gap: 88px; align-items: center; }
+  .hero-nav          { gap: 22px; }
+  .hero-nav li a {
+    font-size: 1.35rem;
+    padding: 17px 58px 16px;
+    letter-spacing: 0.2em;
+  }
+  .hero-destra       { gap: 18px; }
+  .hero-destra-titolo { font-size: 2.1rem; }
+  .hero-destra-riga   { font-size: 1.15rem; letter-spacing: 0.15em; }
 
   footer { padding: 56px 9%; }
 }
