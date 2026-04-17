@@ -222,11 +222,9 @@ body {
 #servizi {
   background-image:
     linear-gradient(
-      170deg,
+      180deg,
       #F6EAE0 0%,
-      #EDCFBE 42%,
-      #F2D9CC 68%,
-      #F6EAE0 100%
+      #EDCFBE 100%
     );
   padding: 88px 8% 96px;
   display: flex;
@@ -283,10 +281,8 @@ body {
 #benessere {
   background-image:
     linear-gradient(
-      170deg,
-      #F6EAE0 0%,
-      #EDCFBE 42%,
-      #F2D9CC 68%,
+      180deg,
+      #EDCFBE 0%,
       #F6EAE0 100%
     );
   padding: 88px 8% 96px;
