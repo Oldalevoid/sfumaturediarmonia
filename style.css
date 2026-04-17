@@ -16,12 +16,12 @@
   --overlay-caldo:         rgba(242, 234, 226, 0.72);
 
   /* Scala tipografica unica */
-  --sz-xs:   clamp(0.8rem,  1vw,    0.9rem);   /* tag, label */
-  --sz-sm:   clamp(0.9rem,  1.2vw,  1rem);     /* bottoni, secondario */
-  --sz-base: clamp(1.05rem, 1.55vw, 1.2rem);   /* corpo testo, servizi */
-  --sz-md:   clamp(1.2rem,  1.8vw,  1.4rem);   /* titoli servizi, destra-titolo */
-  --sz-lg:   clamp(1.5rem,  2.2vw,  1.8rem);   /* descrizione hero */
-  --sz-xl:   clamp(2.8rem,  6vw,    5.2rem);   /* ἁρμονία */
+  --sz-xs:   clamp(0.85rem, 1vw,    1.1rem);   /* tag, label */
+  --sz-sm:   clamp(0.95rem, 1.2vw,  1.3rem);   /* bottoni, secondario */
+  --sz-base: clamp(1.1rem,  1.55vw, 1.55rem);  /* corpo testo, servizi */
+  --sz-md:   clamp(1.25rem, 1.8vw,  1.9rem);   /* titoli servizi, destra-titolo */
+  --sz-lg:   clamp(1.55rem, 2.3vw,  2.6rem);   /* descrizione hero */
+  --sz-xl:   clamp(3rem,    6.5vw,  8.5rem);   /* ἁρμονία */
 }
 
 html { scroll-behavior: smooth; }
@@ -419,9 +419,6 @@ footer {
 
 /* ── Schermi 17" (1440px – 1919px) ── */
 @media (min-width: 1440px) {
-  :root {
-    --sz-xl: clamp(3.5rem, 5.8vw, 6.2rem);
-  }
   .griglia-servizi   { max-width: 1260px; column-gap: 100px; }
   .benessere-griglia { max-width: 1260px; gap: 72px; }
   .hero-descrizione  { max-width: 46%; }
@@ -430,12 +427,10 @@ footer {
 /* ── Schermi 21"+ (≥1920px) ── */
 @media (min-width: 1920px) {
   :root {
-    --sz-xs:   clamp(0.88rem, 0.72vw, 1.05rem);
-    --sz-sm:   clamp(1rem,    0.82vw, 1.2rem);
-    --sz-base: clamp(1.15rem, 1.05vw, 1.45rem);
-    --sz-md:   clamp(1.35rem, 1.2vw,  1.7rem);
-    --sz-lg:   clamp(1.8rem,  1.55vw, 2.2rem);
-    --sz-xl:   clamp(4rem,    5vw,    7.5rem);
+    --sz-base: clamp(1.3rem,  1.4vw,  1.8rem);
+    --sz-md:   clamp(1.6rem,  1.7vw,  2.1rem);
+    --sz-lg:   clamp(2rem,    2vw,    2.8rem);
+    --sz-xl:   clamp(5rem,    5.8vw,  9.5rem);
   }
 
   #hero          { padding: 5vh 9% 7vh; }
