@@ -103,7 +103,7 @@
    2. FILOSOFIA — narrativa centrata, calda
 ══════════════════════════════════════════════ */
 .cs-filosofia {
-  background-color: #EDE7E1;
+  background: linear-gradient(175deg, #F5E9DF 0%, #EDD0C2 50%, #F5E9DF 100%);
   padding: 100px 0 80px;
 }
 
@@ -192,7 +192,7 @@
    3. PROFESSIONISTE — lettere personali
 ══════════════════════════════════════════════ */
 .cs-professioniste {
-  background-color: #E8E0D8;
+  background: linear-gradient(195deg, #F0E3D7 0%, #E8D0C0 40%, #EDD8CB 70%, #F0E3D7 100%);
   padding: 96px 7%;
 }
 
@@ -279,7 +279,7 @@
    4. POESIA — pagina di libro
 ══════════════════════════════════════════════ */
 .cs-poesia {
-  background-color: #F0E8E2;
+  background: linear-gradient(185deg, #F7EBE0 0%, #EDD3C3 35%, #F3DECE 65%, #F7EBE0 100%);
   padding: 96px 7%;
   text-align: center;
 }
@@ -336,4 +336,26 @@
   .cs-filosofia, .cs-professioniste, .cs-poesia { padding: 72px 6%; }
   .cs-citazione-box { padding: 24px 24px; }
   .cs-bio-citazione { padding: 22px 0; }
+}
+
+/* ── Schermi 17" (1440px – 1919px) ── */
+@media (min-width: 1440px) {
+  .cs-col      { max-width: 820px; }
+  .cs-bio-wrap { max-width: 1020px; }
+  .cs-bio-corpo { column-gap: 68px; }
+}
+
+/* ── Schermi 21"+ (≥1920px) ── */
+@media (min-width: 1920px) {
+  .nav-cs  { padding: 24px 9%; }
+  .cs-hero { padding: 140px 12% 100px; }
+
+  .cs-col  { max-width: 960px; padding: 0 48px; }
+
+  .cs-filosofia  { padding: 120px 0 100px; }
+  .cs-professioniste,
+  .cs-poesia     { padding: 112px 9%; }
+
+  .cs-bio-wrap   { max-width: 1260px; }
+  .cs-bio-corpo  { column-gap: 84px; }
 }

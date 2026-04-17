@@ -31,6 +31,7 @@ body {
   color: var(--colore-testo);
   background-color: var(--grigio-fondo);
   overflow-x: hidden;
+  filter: sepia(9%) saturate(114%) brightness(99%);
 }
 
 /* ══════════════════════════════════════════════
@@ -220,8 +221,13 @@ body {
 ══════════════════════════════════════════════ */
 #servizi {
   background-image:
-    linear-gradient(var(--overlay-caldo), var(--overlay-caldo)),
-    url('img/sfondo-servizi.png');
+    linear-gradient(
+      170deg,
+      #F6EAE0 0%,
+      #EDCFBE 42%,
+      #F2D9CC 68%,
+      #F6EAE0 100%
+    );
   padding: 88px 8% 96px;
   display: flex;
   flex-direction: column;
@@ -276,8 +282,13 @@ body {
 ══════════════════════════════════════════════ */
 #benessere {
   background-image:
-    linear-gradient(var(--overlay-caldo), var(--overlay-caldo)),
-    url('img/sfondo-benessere.png');
+    linear-gradient(
+      170deg,
+      #F6EAE0 0%,
+      #EDCFBE 42%,
+      #F2D9CC 68%,
+      #F6EAE0 100%
+    );
   padding: 88px 8% 96px;
   display: flex;
   flex-direction: column;
@@ -408,4 +419,45 @@ footer {
 
 @media (max-width: 480px) {
   .hero-nav li a { font-size: 0.88rem; padding: 7px 20px 6px; }
+}
+
+/* ── Schermi 17" (1440px – 1919px) ── */
+@media (min-width: 1440px) {
+  :root {
+    --sz-xl: clamp(3.5rem, 5.8vw, 6.2rem);
+  }
+  .griglia-servizi   { max-width: 1260px; column-gap: 100px; }
+  .benessere-griglia { max-width: 1260px; gap: 72px; }
+  .hero-descrizione  { max-width: 46%; }
+}
+
+/* ── Schermi 21"+ (≥1920px) ── */
+@media (min-width: 1920px) {
+  :root {
+    --sz-xs:   clamp(0.88rem, 0.72vw, 1.05rem);
+    --sz-sm:   clamp(1rem,    0.82vw, 1.2rem);
+    --sz-base: clamp(1.15rem, 1.05vw, 1.45rem);
+    --sz-md:   clamp(1.35rem, 1.2vw,  1.7rem);
+    --sz-lg:   clamp(1.8rem,  1.55vw, 2.2rem);
+    --sz-xl:   clamp(4rem,    5vw,    7.5rem);
+  }
+
+  #hero          { padding: 5vh 9% 7vh; }
+  #servizi,
+  #benessere     { padding: 100px 9% 112px; }
+
+  .griglia-servizi   {
+    max-width: 1560px;
+    column-gap: 124px;
+    row-gap: 64px;
+  }
+  .benessere-griglia {
+    max-width: 1560px;
+    gap: 90px;
+  }
+
+  .sez-titolo-centro { margin-bottom: 80px; }
+  .hero-descrizione  { max-width: 44%; }
+
+  footer { padding: 56px 9%; }
 }
