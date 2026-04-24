@@ -1,6 +1,30 @@
 /**
- * ἁρμονία — Animazioni al scroll
+ * ἁρμονία — Animazioni al scroll + Banner cookie
  */
+
+/* ── Banner cookie ── */
+(function () {
+  if (localStorage.getItem('cookieAccettato')) return;
+
+  const banner = document.createElement('div');
+  banner.id = 'cookie-banner';
+  banner.innerHTML = `
+    <p class="cookie-testo">
+      Questo sito utilizza esclusivamente cookie tecnici strettamente necessari
+      al suo funzionamento. Non vengono raccolti dati personali, non sono presenti
+      cookie di profilazione o di terze parti. I font sono caricati localmente
+      e nessuna richiesta viene inviata a servizi esterni.
+    </p>
+    <button class="cookie-btn" id="cookie-ok">Ho capito</button>
+  `;
+  document.body.appendChild(banner);
+
+  document.getElementById('cookie-ok').addEventListener('click', function () {
+    localStorage.setItem('cookieAccettato', '1');
+    banner.classList.add('cookie-nascosto');
+    setTimeout(() => banner.remove(), 400);
+  });
+})();
 document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver((entries) => {
