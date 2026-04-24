@@ -437,7 +437,8 @@ footer {
   .griglia-servizi { grid-template-columns: 1fr; column-gap: 0; row-gap: 40px; }
   .servizio.col-sinistra { grid-column: 1; }
   .benessere-griglia { grid-template-columns: 1fr; }
-  .benessere-poesia { display: none; }
+  .benessere-poesia { display: flex; }
+  .benessere-poesia p { white-space: normal; }
   .benessere-servizio h3,
   .benessere-servizio p { text-align: left; }
   footer { flex-direction: column; align-items: flex-start; }
