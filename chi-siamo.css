@@ -80,13 +80,14 @@
   align-items: center;
   text-align: center;
   padding: 120px 10% 80px;
+  filter: saturate(1.18) contrast(1.06) brightness(1.01);
 }
 
 .cs-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(242, 234, 224, 0.48);
+  background: rgba(242, 234, 224, 0.12);
   pointer-events: none;
 }
 
@@ -359,11 +360,30 @@
 }
 
 @media (max-width: 768px) {
-  .cs-hero { padding: 100px 7% 64px; }
+  .cs-hero { padding: 100px 7% 64px; background-position: center top; }
   .cs-col { padding: 0 20px; }
   .cs-filosofia, .cs-professioniste, .cs-poesia { padding: 72px 6%; }
   .cs-citazione-box { padding: 24px 24px; }
   .cs-bio-citazione { padding: 22px 0; }
+}
+
+/* ── iPad Pro (769px – 1366px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cs-hero {
+    padding: 100px 8% 72px;
+    background-position: center top;
+    min-height: auto;
+  }
+  .cs-professioniste { background-position: center top; }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .cs-hero {
+    padding: 110px 9% 80px;
+    background-position: center top;
+  }
+  .cs-professioniste { background-position: center top; }
+  .cs-bio-corpo { column-gap: 52px; }
 }
 
 /* ── Schermi 17" (1440px – 1919px) ── */

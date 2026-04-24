@@ -88,6 +88,7 @@ body {
   padding: 5vh 8% 7vh;
   min-height: 100vh;
   min-height: 100svh;
+  filter: saturate(1.18) contrast(1.06) brightness(1.01);
 }
 
 /* ── Blocco titolo centrale ── */
@@ -404,15 +405,16 @@ footer {
   .hero-destra-titolo { font-size: 1.2rem; }
   .hero-destra-riga { font-size: 0.82rem; }
 
-  #hero { min-height: auto; }
-  #servizi, #benessere { min-height: auto; padding: 68px 7% 76px; }
+  #hero { min-height: auto; background-position: center top; }
+  #servizi { min-height: auto; padding: 68px 7% 76px; background-position: center center; }
+  #benessere { min-height: auto; padding: 68px 7% 76px; background-position: center center; }
   .griglia-servizi { column-gap: 44px; }
   .sez-titolo-centro { margin-bottom: 48px; }
 }
 
 /* ── iPad Pro landscape + piccoli laptop (1025px – 1366px) ── */
 @media (min-width: 1025px) and (max-width: 1366px) {
-  #hero { padding: 5vh 7% 6vh; }
+  #hero { padding: 5vh 7% 6vh; background-position: center top; }
   .hero-corpo { justify-content: flex-start; gap: 60px; padding-top: 4vh; padding-bottom: 0; }
   .hero-descrizione { max-width: 54%; }
 
@@ -423,7 +425,8 @@ footer {
   .hero-destra-titolo { font-size: 1.45rem; }
   .hero-destra-riga { font-size: 0.9rem; }
 
-  #servizi, #benessere { min-height: auto; padding: 76px 7% 84px; }
+  #servizi { min-height: auto; padding: 76px 7% 84px; background-position: center center; }
+  #benessere { min-height: auto; padding: 76px 7% 84px; background-position: center center; }
   .griglia-servizi { column-gap: 56px; }
   .sez-titolo-centro { margin-bottom: 52px; }
 }
