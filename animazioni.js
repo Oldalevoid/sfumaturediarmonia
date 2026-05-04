@@ -27,6 +27,22 @@
 })();
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── Hamburger menu ── */
+  const hamburger = document.querySelector('.nav-cs-hamburger');
+  const navLinks  = document.querySelector('.nav-cs-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('aperto');
+      navLinks.classList.toggle('aperto');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('aperto');
+        navLinks.classList.remove('aperto');
+      });
+    });
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

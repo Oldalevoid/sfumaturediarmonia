@@ -48,12 +48,12 @@
 :root {
   --font:                  'Crimson Pro', serif;
 
-  --grigio-fondo:          #EDE7E1;
+  --grigio-fondo:          #EEEDF4;
   --rosa-principale:       #E8B5AC;
   --rosa-chiaro:           #EED2C8;
   --colore-testo:          #6B5C58;
   --colore-titoli-sec:     #7A4A58;
-  --overlay-caldo:         rgba(242, 234, 226, 0.72);
+  --overlay-freddo:        rgba(238, 236, 250, 0.72);
 
   /* Scala tipografica unica */
   --sz-xs:   clamp(0.85rem, 1vw,    1.1rem);   /* tag, label */
@@ -71,7 +71,7 @@ body {
   color: var(--colore-testo);
   background-color: var(--grigio-fondo);
   overflow-x: hidden;
-  filter: sepia(9%) saturate(114%) brightness(99%);
+  filter: saturate(106%) brightness(101%) hue-rotate(-10deg);
 }
 
 /* ══════════════════════════════════════════════
@@ -128,7 +128,7 @@ body {
   padding: 5vh 8% 7vh;
   min-height: 100vh;
   min-height: 100svh;
-  filter: saturate(1.18) contrast(1.06) brightness(1.01);
+  filter: saturate(1.12) contrast(1.04) brightness(1.04) hue-rotate(-10deg);
 }
 
 /* ── Blocco titolo centrale ── */
@@ -172,8 +172,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 5vh;
-  padding-bottom: 8vh;
+  padding-top: clamp(24px, 5vh, 64px);
+  padding-bottom: clamp(32px, 8vh, 80px);
 }
 
 .hero-descrizione {
@@ -190,7 +190,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
-  gap: 40px;
+  gap: clamp(22px, 3vw, 48px);
   /* nessun padding extra: usa già i margini di #hero */
 }
 
@@ -200,7 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 11px;
+  gap: clamp(7px, 0.9vw, 14px);
 }
 
 .hero-nav li a {
@@ -236,7 +236,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 9px;
+  gap: clamp(6px, 0.7vw, 12px);
 }
 
 .hero-destra-titolo {
@@ -262,12 +262,12 @@ body {
 ══════════════════════════════════════════════ */
 #servizi {
   background-image:
-    linear-gradient(180deg, rgba(246,234,224,0.12) 0%, rgba(237,207,190,0.10) 100%),
+    linear-gradient(180deg, rgba(248,244,252,0.14) 0%, rgba(232,214,238,0.12) 100%),
     url('img/sfondo-servizi.png');
   background-size: cover;
   background-position: center;
-  filter: saturate(1.18) contrast(1.06) brightness(1.01);
-  padding: 88px 8% 96px;
+  filter: saturate(1.12) contrast(1.04) brightness(1.04) hue-rotate(-10deg);
+  padding: clamp(52px, 6.5vw, 96px) 8% clamp(56px, 7vw, 104px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,14 +285,14 @@ body {
   color: var(--colore-testo);
   letter-spacing: 0.18em;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: clamp(36px, 4.5vw, 72px);
 }
 
 .griglia-servizi {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 88px;
-  row-gap: 52px;
+  column-gap: clamp(44px, 6vw, 96px);
+  row-gap: clamp(32px, 3.8vw, 60px);
   width: 100%;
   max-width: 1100px;
 }
@@ -303,7 +303,7 @@ body {
   font-variant: small-caps;
   color: var(--colore-titoli-sec);
   letter-spacing: 0.07em;
-  margin-bottom: 12px;
+  margin-bottom: clamp(8px, 0.9vw, 14px);
 }
 
 .servizio p {
@@ -321,12 +321,12 @@ body {
 ══════════════════════════════════════════════ */
 #benessere {
   background-image:
-    linear-gradient(180deg, rgba(237,207,190,0.10) 0%, rgba(246,234,224,0.12) 100%),
+    linear-gradient(180deg, rgba(232,214,238,0.12) 0%, rgba(248,244,252,0.14) 100%),
     url('img/sfondo-benessere.png');
   background-size: cover;
   background-position: center;
-  filter: saturate(1.18) contrast(1.06) brightness(1.01);
-  padding: 88px 8% 96px;
+  filter: saturate(1.12) contrast(1.04) brightness(1.04) hue-rotate(-10deg);
+  padding: clamp(52px, 6.5vw, 96px) 8% clamp(56px, 7vw, 104px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,10 +335,10 @@ body {
 .benessere-griglia {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: clamp(36px, 4.5vw, 68px);
   width: 100%;
   max-width: 1100px;
-  margin-top: 16px;
+  margin-top: clamp(10px, 1.2vw, 18px);
 }
 
 .benessere-poesia {
@@ -369,14 +369,14 @@ body {
   font-size: var(--sz-sm);
   color: var(--colore-titoli-sec);
   letter-spacing: 0.06em;
-  margin-top: 14px;
+  margin-top: clamp(8px, 1vw, 18px);
   align-self: flex-end;
 }
 
 .benessere-contenuto {
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: clamp(28px, 3.5vw, 52px);
   justify-content: center;
 }
 
@@ -400,6 +400,134 @@ body {
 }
 
 /* ══════════════════════════════════════════════
+   SEZIONE CONTATTI
+══════════════════════════════════════════════ */
+.contatti-sezione {
+  background:
+    radial-gradient(ellipse 55% 42% at 8%  18%, rgba(240,180,210,0.52) 0%, transparent 65%),
+    radial-gradient(ellipse 44% 56% at 92% 10%, rgba(250,195,220,0.46) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 38% at 54% 86%, rgba(235,170,205,0.48) 0%, transparent 68%),
+    radial-gradient(ellipse 38% 50% at 78% 54%, rgba(255,208,228,0.38) 0%, transparent 58%),
+    radial-gradient(ellipse 42% 32% at 24% 76%, rgba(245,190,215,0.42) 0%, transparent 64%),
+    #FDFAFA;
+  padding: clamp(80px, 8vw, 120px) 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+.contatti-label {
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: var(--sz-xs);
+  color: var(--colore-titoli-sec);
+  letter-spacing: 0.28em;
+  opacity: 0.75;
+  margin-bottom: clamp(10px, 1.2vw, 16px);
+}
+
+.contatti-titolo {
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4.5vw, 5.2rem);
+  color: rgba(122, 74, 88, 0.32);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: clamp(18px, 2.2vw, 32px);
+}
+
+.contatti-intro {
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--sz-base);
+  color: var(--colore-testo);
+  line-height: 1.9;
+  max-width: 560px;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.contatti-card {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid rgba(232, 181, 172, 0.50);
+  border-radius: 16px;
+  background: rgba(255, 248, 252, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: clamp(28px, 3.5vw, 48px) 0;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  justify-content: center;
+}
+
+.contatti-voce-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, 0.7vw, 10px);
+  padding: 0 clamp(28px, 4vw, 56px);
+}
+
+.contatti-separatore {
+  width: 1px;
+  background: rgba(232, 181, 172, 0.45);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.contatti-etichetta {
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: var(--sz-xs);
+  color: var(--colore-titoli-sec);
+  letter-spacing: 0.22em;
+  opacity: 0.70;
+}
+
+.contatti-valore {
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--sz-sm);
+  color: var(--colore-testo);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+a.contatti-valore:hover { color: var(--colore-titoli-sec); }
+
+.contatti-chiusura {
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: var(--sz-xs);
+  color: var(--colore-titoli-sec);
+  letter-spacing: 0.20em;
+  opacity: 0.50;
+}
+
+@media (max-width: 768px) {
+  .contatti-sezione { min-height: auto; padding: clamp(56px, 8vw, 80px) 7%; }
+  .contatti-card {
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(24px, 4vw, 36px) clamp(20px, 5vw, 36px);
+    gap: clamp(22px, 4vw, 30px);
+  }
+  .contatti-separatore { width: 48px; height: 1px; align-self: center; }
+  .contatti-voce-wrap { padding: 0; }
+  .contatti-intro br { display: none; }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .contatti-sezione { min-height: auto; }
+  .contatti-card { flex-direction: column; align-items: center; padding: clamp(24px, 4vw, 36px) clamp(24px, 5vw, 40px); gap: clamp(20px, 3.5vw, 28px); }
+  .contatti-separatore { width: 48px; height: 1px; align-self: center; }
+  .contatti-voce-wrap { padding: 0; }
+}
+
+/* ══════════════════════════════════════════════
    BANNER COOKIE
 ══════════════════════════════════════════════ */
 #cookie-banner {
@@ -411,9 +539,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 20px 7%;
-  background: rgba(237, 231, 225, 0.96);
+  gap: clamp(14px, 1.8vw, 28px);
+  padding: clamp(14px, 1.6vw, 24px) 7%;
+  background: rgba(238, 236, 250, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid rgba(232, 181, 172, 0.45);
@@ -461,14 +589,14 @@ body {
    FOOTER
 ══════════════════════════════════════════════ */
 footer {
-  padding: 46px 8%;
+  padding: clamp(28px, 3.5vw, 52px) 8%;
   background-color: var(--grigio-fondo);
   border-top: 1px solid var(--rosa-chiaro);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: clamp(12px, 1.4vw, 22px);
 }
 
 .footer-brand {
@@ -490,43 +618,63 @@ footer {
 /* ══════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════ */
-/* ── Tablet landscape + iPad Pro piccolo (769px – 1024px) ── */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #hero { padding: 5vh 6% 5vh; }
-  .hero-corpo { justify-content: flex-start; gap: 52px; padding-top: 3vh; padding-bottom: 0; }
-  .hero-descrizione { max-width: 62%; }
+/* ── iPad portrait (769px – 900px) — colonna singola come mobile ── */
+@media (min-width: 769px) and (max-width: 900px) {
+  #hero { padding: 4vh 6% 5vh; min-height: 100svh; background-position: center top; }
+  .hero-corpo { justify-content: flex-start; gap: clamp(28px, 4vh, 44px); padding-top: 2vh; padding-bottom: 0; }
+  .hero-descrizione { max-width: 100%; }
+  .hero-bottom { grid-template-columns: 1fr; gap: clamp(22px, 3vh, 36px); }
+  .hero-destra { align-items: flex-start; }
+  .hero-nav { gap: clamp(8px, 1.2vw, 14px); }
+  .hero-nav li a { font-size: 1rem; padding: 10px 26px 9px; }
+  .hero-destra-titolo { font-size: 1.25rem; }
+  .hero-destra-riga { font-size: 0.85rem; }
 
-  .hero-bottom { gap: 24px; }
-  .hero-nav { gap: 12px; }
-  .hero-nav li a { font-size: 0.95rem; padding: 10px 24px 9px; }
-  .hero-destra { gap: 10px; }
-  .hero-destra-titolo { font-size: 1.2rem; }
-  .hero-destra-riga { font-size: 0.82rem; }
+  #servizi { min-height: auto; padding: clamp(52px, 7vw, 72px) 7% clamp(56px, 7.5vw, 80px); background-position: center; }
+  #benessere { min-height: auto; padding: clamp(52px, 7vw, 72px) 7% clamp(56px, 7.5vw, 80px); background-position: center; }
+  .griglia-servizi { grid-template-columns: 1fr; column-gap: 0; row-gap: clamp(32px, 4vw, 44px); }
+  .servizio.col-sinistra { grid-column: 1; }
+  .benessere-griglia { grid-template-columns: 1fr; }
+  .benessere-poesia p { white-space: normal; }
+  .benessere-servizio h3, .benessere-servizio p { text-align: left; }
+  .sez-titolo-centro { margin-bottom: clamp(32px, 4vw, 48px); }
+}
 
-  #hero { min-height: auto; background-position: center top; }
-  #servizi { min-height: auto; padding: 68px 7% 76px; background-position: center center; }
-  #benessere { min-height: auto; padding: 68px 7% 76px; background-position: center center; }
-  .griglia-servizi { column-gap: 44px; }
-  .sez-titolo-centro { margin-bottom: 48px; }
+/* ── iPad landscape + iPad Pro portrait (901px – 1024px) ── */
+@media (min-width: 901px) and (max-width: 1024px) {
+  #hero { padding: 5vh 6% 5vh; min-height: 100svh; background-position: center top; }
+  .hero-corpo { justify-content: flex-start; gap: clamp(36px, 5vh, 56px); padding-top: 3vh; padding-bottom: 0; }
+  .hero-descrizione { max-width: 65%; }
+  .hero-bottom { gap: clamp(20px, 2.5vw, 32px); align-items: start; }
+  .hero-nav { gap: clamp(8px, 1.2vw, 14px); }
+  .hero-nav li a { font-size: 0.97rem; padding: 10px 24px 9px; }
+  .hero-destra { gap: clamp(6px, 0.9vw, 12px); }
+  .hero-destra-titolo { font-size: 1.3rem; }
+  .hero-destra-riga { font-size: 0.86rem; }
+
+  #servizi { min-height: auto; padding: clamp(52px, 6.5vw, 72px) 7% clamp(56px, 7vw, 80px); background-position: center; }
+  #benessere { min-height: auto; padding: clamp(52px, 6.5vw, 72px) 7% clamp(56px, 7vw, 80px); background-position: center; }
+  .griglia-servizi { column-gap: clamp(36px, 4.5vw, 52px); }
+  .sez-titolo-centro { margin-bottom: clamp(32px, 4vw, 48px); }
 }
 
 /* ── iPad Pro landscape + piccoli laptop (1025px – 1366px) ── */
 @media (min-width: 1025px) and (max-width: 1366px) {
   #hero { padding: 5vh 7% 6vh; background-position: center top; }
-  .hero-corpo { justify-content: flex-start; gap: 60px; padding-top: 4vh; padding-bottom: 0; }
+  .hero-corpo { justify-content: flex-start; gap: clamp(44px, 6vh, 68px); padding-top: 4vh; padding-bottom: 0; }
   .hero-descrizione { max-width: 54%; }
 
-  .hero-bottom { gap: 36px; align-items: center; }
-  .hero-nav { gap: 14px; }
+  .hero-bottom { gap: clamp(28px, 3vw, 44px); align-items: center; }
+  .hero-nav { gap: clamp(10px, 1.2vw, 16px); }
   .hero-nav li a { font-size: 1.02rem; padding: 11px 30px 10px; }
-  .hero-destra { gap: 11px; }
+  .hero-destra { gap: clamp(8px, 0.9vw, 13px); }
   .hero-destra-titolo { font-size: 1.45rem; }
   .hero-destra-riga { font-size: 0.9rem; }
 
-  #servizi { min-height: auto; padding: 76px 7% 84px; background-position: center center; }
-  #benessere { min-height: auto; padding: 76px 7% 84px; background-position: center center; }
-  .griglia-servizi { column-gap: 56px; }
-  .sez-titolo-centro { margin-bottom: 52px; }
+  #servizi { min-height: auto; padding: clamp(60px, 7vw, 84px) 7% clamp(64px, 7.5vw, 88px); background-position: center; }
+  #benessere { min-height: auto; padding: clamp(60px, 7vw, 84px) 7% clamp(64px, 7.5vw, 88px); background-position: center; }
+  .griglia-servizi { column-gap: clamp(44px, 5vw, 64px); }
+  .sez-titolo-centro { margin-bottom: clamp(36px, 4.2vw, 56px); }
 }
 
 @media (max-width: 768px) {
