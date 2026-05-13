@@ -465,11 +465,12 @@ body {
 }
 
 .contatti-voce-wrap {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: clamp(6px, 0.7vw, 10px);
-  padding: 0 clamp(28px, 4vw, 56px);
+  padding: 0 clamp(20px, 2.8vw, 40px);
 }
 
 .contatti-separatore {
@@ -597,6 +598,11 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: clamp(12px, 1.4vw, 22px);
+}
+
+.footer-greco {
+  font-variant: normal;
+  font-style: italic;
 }
 
 .footer-brand {
