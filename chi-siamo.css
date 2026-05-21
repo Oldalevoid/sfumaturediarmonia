@@ -182,6 +182,21 @@
   animation: fadeInUp 1.2s cubic-bezier(0.22,1,0.36,1) both 0.5s;
 }
 
+/* ── Hero variante pagine profilo ── */
+.cs-hero-profilo {
+  min-height: 60vh;
+}
+
+.cs-hero-qualifica-sub {
+  font-style: normal;
+  font-variant: small-caps;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  letter-spacing: 0.2em;
+  opacity: 0.75;
+  margin-top: -16px;
+  margin-bottom: 0;
+}
+
 /* ══════════════════════════════════════════════
    2. FILOSOFIA — narrativa centrata, calda
 ══════════════════════════════════════════════ */
