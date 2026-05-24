@@ -96,8 +96,19 @@
 }
 
 @media (max-width: 768px) {
-  .cs-prof-nav { margin-top: clamp(24px, 4vh, 40px); }
-  .cs-prof-btn { font-size: clamp(1.1rem, 4vw, 1.5rem); padding: 10px clamp(20px, 5vw, 36px); }
+  .cs-prof-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(12px, 3vw, 20px);
+    margin-top: clamp(24px, 4vh, 40px);
+  }
+  .cs-prof-btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    padding: 12px clamp(20px, 5vw, 36px);
+  }
 }
 
 /* ── Hamburger ── */
