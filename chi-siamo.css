@@ -426,7 +426,7 @@
 
 .cs-poesia-autore {
   font-style: italic;
-  font-size: clamp(0.88rem, 1.2vw, 1rem);
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
   color: var(--colore-testo);
   opacity: 0.6;
   margin-top: clamp(40px, 6vw, 80px);
