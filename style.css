@@ -763,4 +763,11 @@ footer {
   .hero-destra-riga   { font-size: 1.15rem; letter-spacing: 0.15em; }
 
   footer { padding: 56px 9%; }
+
+  .contatti-sezione { padding: clamp(100px, 10vw, 140px) 16%; }
+  .contatti-card {
+    max-width: 1000px;
+    padding: clamp(40px, 4vw, 64px) 0;
+  }
+  .contatti-voce-wrap { padding: 0 clamp(40px, 4vw, 72px); }
 }
