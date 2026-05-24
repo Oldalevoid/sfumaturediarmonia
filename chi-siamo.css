@@ -429,7 +429,12 @@
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   color: var(--colore-testo);
   opacity: 0.6;
+  margin-top: clamp(40px, 6vw, 80px);
   margin-bottom: clamp(36px, 5vw, 80px);
+  text-align: right;
+  width: 100%;
+  max-width: 680px;
+  padding-right: clamp(8px, 2vw, 32px);
 }
 
 .cs-versi {
