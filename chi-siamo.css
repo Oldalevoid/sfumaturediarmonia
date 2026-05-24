@@ -20,7 +20,7 @@
 
 .nav-cs-brand {
   font-family: var(--font);
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: 1.6rem;
   color: rgba(122, 74, 88, 0.70);
@@ -451,7 +451,7 @@
 
 .cs-greco-fine {
   display: block;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: 2.2rem;
   color: rgba(122, 74, 88, 0.25);
