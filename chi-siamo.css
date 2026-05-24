@@ -164,7 +164,7 @@
 
 .cs-hero-greco {
   display: block;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: clamp(4rem, 9vw, 10rem);
   color: rgba(122, 74, 88, 0.35);
