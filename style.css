@@ -621,6 +621,22 @@ footer {
   line-height: 1.7;
 }
 
+.footer-privacy {
+  width: 100%;
+  text-align: center;
+  margin-top: clamp(16px, 2vw, 24px);
+  font-size: var(--sz-xs);
+  opacity: 0.55;
+}
+.footer-privacy a {
+  color: var(--colore-titoli-sec);
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  transition: opacity 0.25s;
+}
+.footer-privacy a:hover { opacity: 1; text-decoration: underline; }
+
 /* ══════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════ */
