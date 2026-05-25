@@ -562,6 +562,12 @@ a.contatti-valore:hover { color: var(--colore-titoli-sec); }
   flex: 1;
 }
 
+.cookie-link {
+  color: var(--colore-titoli-sec);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .cookie-btn {
   font-family: var(--font);
   font-size: 0.9rem;

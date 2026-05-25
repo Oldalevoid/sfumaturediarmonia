@@ -14,6 +14,7 @@
       e alla fruizione dei servizi richiesti dall'utente. Per tali cookie non è richiesto il consenso
       dell'interessato, ai sensi dell'art. 122 del D.lgs. 196/2003 e delle Linee guida cookie del Garante.
       Non vengono utilizzati cookie di profilazione.
+      Per informazioni circa il trattamento dei dati personali consulta la <a href="privacy-policy.html" class="cookie-link">Privacy Policy</a>.
     </p>
     <button class="cookie-btn" id="cookie-ok">Ho capito</button>
   `;
