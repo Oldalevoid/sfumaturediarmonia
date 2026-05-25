@@ -69,12 +69,20 @@
       font-family: var(--font);
       font-size: clamp(1rem, 1.3vw, 1.15rem);
       color: var(--colore-testo);
-      line-height: 1.9;
-      padding-left: 1.4em;
+      line-height: 1.85;
+      padding-left: 1.6em;
       margin-bottom: 14px;
     }
 
-    .privacy-lista li { margin-bottom: 6px; }
+    .privacy-lista li {
+      margin-bottom: 10px;
+    }
+
+    .privacy-lista a {
+      color: var(--colore-titoli-sec);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     /* Tabella */
     .privacy-tabella-wrap {
@@ -88,7 +96,7 @@
       width: 100%;
       border-collapse: collapse;
       font-family: var(--font);
-      font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+      font-size: clamp(0.9rem, 1.1vw, 1.02rem);
       color: var(--colore-testo);
     }
 
@@ -108,43 +116,27 @@
     }
 
     .privacy-tabella td {
-      padding: 16px 18px;
+      padding: 18px 18px;
       vertical-align: top;
-      line-height: 1.75;
+      line-height: 1.78;
       border-bottom: 1px solid rgba(232, 181, 172, 0.20);
     }
 
-    .privacy-tabella tbody tr:last-child td { border-bottom: none; }
+    .privacy-tabella tbody tr:last-child td {
+      border-bottom: none;
+    }
 
     .privacy-tabella tbody tr:nth-child(even) {
       background: rgba(248, 243, 240, 0.5);
     }
 
-    .privacy-label-voce {
-      font-style: italic;
+    .privacy-h3-tabella {
+      font-weight: 400;
+      font-variant: small-caps;
+      letter-spacing: 0.14em;
+      font-size: clamp(0.78rem, 0.95vw, 0.88rem);
       color: var(--colore-titoli-sec);
-    }
-
-    /* Diritti lista */
-    .privacy-diritti {
-      font-family: var(--font);
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
-      color: var(--colore-testo);
-      line-height: 2;
-      padding-left: 0;
-      list-style: none;
-      margin-bottom: 14px;
-    }
-
-    .privacy-diritti li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(232, 181, 172, 0.18);
-    }
-    .privacy-diritti li:last-child { border-bottom: none; }
-
-    .privacy-diritti em {
-      color: var(--colore-titoli-sec);
-      font-style: italic;
+      margin: clamp(24px, 3vw, 36px) 0 10px;
     }
   </style>
 </head>
@@ -165,38 +157,41 @@
   <div class="privacy-wrap">
 
     <h1 class="privacy-titolo">Privacy Policy</h1>
-    <span class="privacy-sottotitolo">Informativa ai sensi degli Artt. 13 e 26 del Regolamento (UE) 2016/679 – GDPR</span>
+    <span class="privacy-sottotitolo">Informativa ai sensi degli Artt. 13 e 26 del Regolamento (UE) 2016/679 – SITO WEB</span>
 
     <!-- Intro -->
     <div class="privacy-sezione">
-      <p class="privacy-p">Con il presente documento i Contitolari del trattamento desiderano informarLa sulle finalità e le modalità del trattamento dei Suoi dati personali e sui diritti che Le sono riconosciuti dal GDPR. La presente Informativa potrà essere integrata ove eventuali servizi aggiuntivi da Lei richiesti dovessero comportare ulteriori trattamenti.</p>
+      <p class="privacy-p">Con il presente documento ("Informativa") i Contitolari del trattamento, come di seguito definiti, desiderano informarLa sulle finalità e le modalità del trattamento dei Suoi dati personali e sui diritti che Le sono riconosciuti dal Regolamento (UE) 2016/679 relativo alla protezione delle persone fisiche, con riguardo al trattamento dei dati personali nonché alla loro libera circolazione ("GDPR"). La presente Informativa potrà essere integrata dai Contitolari ove eventuali servizi aggiuntivi da Lei richiesti dovessero comportare ulteriori trattamenti.</p>
     </div>
 
     <!-- Contitolari -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Contitolari del trattamento</h2>
-      <p class="privacy-p">Il trattamento dei dati personali avviene in regime di contitolarità ai sensi dell'art. 26 del GDPR tra:</p>
+      <p class="privacy-p">Il trattamento dei dati personali del presente Sito Web avviene in regime di contitolarità ai sensi dell'art. 26 del GDPR tra i seguenti soggetti (di seguito, congiuntamente, i "Contitolari"):</p>
       <ul class="privacy-lista">
-        <li><strong style="font-weight:400;">Valeria Garavaglia</strong> – P. IVA 05552540964 · <a href="mailto:valeria.garavaglia@sfumaturedicura.it">valeria.garavaglia@sfumaturedicura.it</a></li>
-        <li><strong style="font-weight:400;">Elisa Ottaiano</strong> – P. IVA 06859220961 · <a href="mailto:elisa.ottaiano@sfumaturedicura.it">elisa.ottaiano@sfumaturedicura.it</a></li>
+        <li>Valeria Garavaglia – P. IVA 05552540964, e-mail: <a href="mailto:valeria.garavaglia@sfumaturedicura.it">valeria.garavaglia@sfumaturedicura.it</a>;</li>
+        <li>Elisa Ottaiano – P. IVA 06859220961, e-mail: <a href="mailto:elisa.ottaiano@sfumaturedicura.it">elisa.ottaiano@sfumaturedicura.it</a></li>
       </ul>
-      <p class="privacy-p">I Contitolari hanno definito, mediante apposito accordo ai sensi dell'art. 26 del GDPR, le rispettive responsabilità. Il contenuto essenziale dell'accordo è disponibile a richiesta, da inoltrare ai recapiti sopra indicati. L'interessato può esercitare i propri diritti nei confronti di ciascuno dei Contitolari.</p>
+      <p class="privacy-p">I Contitolari hanno definito, mediante apposito accordo ai sensi dell'art. 26 del GDPR, le rispettive responsabilità in merito all'osservanza degli obblighi derivanti dal Regolamento, con particolare riferimento all'esercizio dei diritti dell'interessato e alle informazioni da fornire ai sensi degli articoli 13 e 14. Il contenuto essenziale dell'accordo è disponibile a richiesta dell'interessato, da inoltrare ai recapiti sopra indicati. L'interessato può, in ogni caso, esercitare i propri diritti nei confronti di e contro ciascuno dei Contitolari.</p>
     </div>
 
     <!-- Tipi di dati -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Tipi di dati trattati</h2>
-      <p class="privacy-p"><span class="privacy-label-voce">Dati tecnici e di navigazione</span> — indirizzi IP, nomi a dominio, URI/URL delle risorse richieste, orario della richiesta, metodo e dimensione della risposta, codice di stato del server e altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente.</p>
-      <p class="privacy-p">Il sito ha natura di mera vetrina informativa: non sono presenti form di contatto, non sono utilizzati cookie né altre tecnologie di tracciamento o profilazione. I dati di navigazione sono raccolti dai sistemi informatici nel corso del loro normale esercizio.</p>
+      <p class="privacy-p">Le attività di trattamento svolte sono finalizzate all'acquisizione dei seguenti dati personali:</p>
+      <ul class="privacy-lista">
+        <li>Dati tecnici e di navigazione (es. indirizzi IP, nomi a dominio dei computer, indirizzi in notazione URI/URL delle risorse richieste, orario della richiesta, metodo utilizzato nel sottoporre la richiesta al server, dimensione del file ottenuto in risposta, codice numerico indicante lo stato della risposta data dal server e altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente).</li>
+      </ul>
+      <p class="privacy-p">Il sito ha natura di mera vetrina informativa: non sono presenti form di contatto o di raccolta dati e non sono utilizzati cookie né altre tecnologie analoghe di tracciamento o di profilazione. I dati di navigazione sopra indicati sono raccolti dai sistemi informatici e dalle procedure software preposte al funzionamento del sito nel corso del loro normale esercizio, per loro natura strettamente associati all'uso dei protocolli di comunicazione di Internet.</p>
     </div>
 
     <!-- Categorie -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Categorie di interessati</h2>
-      <p class="privacy-p">Utenti Web e Visitatori del Sito.</p>
+      <p class="privacy-p">Le attività di trattamento svolte sono rivolte alle seguenti categorie di interessati: Utenti Web e Visitatori del Sito.</p>
     </div>
 
-    <!-- Tabella finalità -->
+    <!-- Finalità - tabelle -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Finalità, Base Giuridica e Tempi di Conservazione</h2>
 
@@ -204,26 +199,42 @@
         <table class="privacy-tabella">
           <thead>
             <tr>
-              <th style="width:38%">Finalità</th>
-              <th style="width:32%">Base Giuridica</th>
-              <th style="width:30%">Tempi di Conservazione</th>
+              <th style="width:42%">Finalità</th>
+              <th style="width:30%">Base Giuridica</th>
+              <th style="width:28%">Tempi di Conservazione</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><span class="privacy-label-voce">A) Funzionamento e fruibilità del sito.</span><br>Gestione delle sessioni, monitoraggio del traffico, ottimizzazione delle prestazioni e risoluzione di errori di sistema.</td>
-              <td>Legittimo interesse dei Contitolari.<br><em>Art. 6, par. 1, lett. f) GDPR</em></td>
-              <td>Durata della sessione di navigazione o periodo strettamente necessario (salvo accertamento di reati da parte dell'autorità giudiziaria).</td>
+              <td><strong style="font-weight:400;">A) Funzionamento e fruibilità del sito.</strong> Il trattamento dei dati è essenziale per garantire il corretto funzionamento e la fruibilità del sito da parte degli utenti. A titolo esemplificativo e non esaustivo, tale attività può comprendere la gestione delle sessioni, il monitoraggio del traffico finalizzato all'ottimizzazione delle prestazioni del sito, la garanzia di tempi di risposta adeguati e la risoluzione di eventuali errori di sistema.</td>
+              <td>Dati Comuni<br><br>Il trattamento è necessario per il perseguimento del legittimo interesse dei Contitolari del trattamento. Ex Art. 6, par. 1, lett. f) del GDPR.</td>
+              <td>Fino alla durata della sessione di navigazione o comunque per un periodo strettamente necessario al perseguimento della finalità (salvo eventuali necessità di accertamento di reati da parte dell'autorità giudiziaria).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="privacy-h3-tabella">Attività di trattamento ulteriori alle finalità di navigazione:</p>
+
+      <div class="privacy-tabella-wrap">
+        <table class="privacy-tabella">
+          <thead>
+            <tr>
+              <th style="width:42%">Finalità</th>
+              <th style="width:30%">Base Giuridica</th>
+              <th style="width:28%">Tempi di Conservazione</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="font-weight:400;">B) Difesa in giudizio.</strong> Il trattamento dei dati è necessario per l'accertamento, l'esercizio o la difesa dei diritti dei Contitolari in sede giudiziaria, nonché per l'esercizio di azioni di recupero crediti nei confronti dell'interessato.</td>
+              <td>Dati Comuni<br><br>Perseguimento del legittimo interesse dei Contitolari del trattamento. Ex Art. 6, par. 1, lett. f) del GDPR.</td>
+              <td>Per tutta la durata del contenzioso, fino all'esaurimento dei termini di esperibilità delle azioni di impugnazione.</td>
             </tr>
             <tr>
-              <td><span class="privacy-label-voce">B) Difesa in giudizio.</span><br>Accertamento, esercizio o difesa dei diritti in sede giudiziaria e recupero crediti.</td>
-              <td>Legittimo interesse dei Contitolari.<br><em>Art. 6, par. 1, lett. f) GDPR</em></td>
-              <td>Durata del contenzioso, fino all'esaurimento dei termini di impugnazione.</td>
-            </tr>
-            <tr>
-              <td><span class="privacy-label-voce">C) Gestione dei diritti degli interessati.</span><br>Gestione delle richieste ai sensi degli artt. 15 e ss. del GDPR.</td>
-              <td>Adempimento di obbligo legale.<br><em>Art. 6, par. 1, lett. c) GDPR</em></td>
-              <td>Massimo 5 anni dalla richiesta (salvo contenziosi).</td>
+              <td><strong style="font-weight:400;">C) Gestione delle richieste di esercizio dei diritti degli interessati.</strong> Il trattamento è necessario per la gestione delle richieste dei diritti degli interessati ai sensi degli artt. 15 e ss. del GDPR.</td>
+              <td>Dati Comuni<br><br>Adempimento di un obbligo legale al quale sono soggetti i Contitolari. Ex Art. 6, par. 1, lett. c) del GDPR.</td>
+              <td>I dati saranno conservati per un massimo di 5 anni dalla richiesta (salvo contenziosi).</td>
             </tr>
           </tbody>
         </table>
@@ -239,34 +250,39 @@
     <!-- Trasferimento extra UE -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Trasferimento dati extra UE</h2>
-      <p class="privacy-p">Hostinger è la piattaforma di hosting. Eventuali trasferimenti di dati al di fuori dello Spazio Economico Europeo sono disciplinati dal Data Processing Addendum di Hostinger (<a href="https://www.hostinger.com/it/legal/dpa" target="_blank" rel="noopener">hostinger.com/it/legal/dpa</a>), che prevede l'applicazione delle Clausole Contrattuali Standard UE.</p>
-      <p class="privacy-p">Qualora il trasferimento si rendesse necessario, avverrà esclusivamente verso Paesi con decisione di adeguatezza della Commissione Europea o mediante le garanzie previste dagli artt. 46 e 49 del GDPR.</p>
+      <p class="privacy-p">Hostinger è la piattaforma di hosting. Eventuali trasferimenti di dati personali al di fuori dello Spazio Economico Europeo sono disciplinati dal Data Processing Addendum di Hostinger, disponibile al seguente link: <a href="https://www.hostinger.com/it/legal/dpa" target="_blank" rel="noopener">https://www.hostinger.com/it/legal/dpa</a>.</p>
+      <p class="privacy-p">In particolare, Hostinger prevede l'applicazione delle Clausole Contrattuali Standard dell'Unione Europea quale garanzia per i trasferimenti extra SEE.</p>
+      <p class="privacy-p">Qualora tale trasferimento dovesse rendersi necessario e/o inevitabile per esigenze organizzative dei Contitolari, si rende noto che:</p>
+      <ul class="privacy-lista">
+        <li>esso avverrà esclusivamente verso Paesi nei confronti dei quali sussista una decisione di adeguatezza adottata dalla Commissione Europea;</li>
+        <li>ove si tratti di un Paese diverso da quello di cui al punto precedente, il trasferimento dei dati sarà disciplinato dalle Clausole Contrattuali Standard salva l'adozione, previo accordo delle Parti coinvolte, di un'altra tra le misure di salvaguardia stabilite dall'art. 46 del GDPR o dall'applicazione di uno dei meccanismi derogatori di cui all'art. 49 del GDPR.</li>
+      </ul>
     </div>
 
     <!-- Destinatari -->
     <div class="privacy-sezione">
       <h2 class="privacy-h2">Destinatari del trattamento</h2>
-      <p class="privacy-p">I dati possono essere condivisi con fornitori strettamente funzionali alle attività dei Contitolari (es. provider di hosting e servizi tecnici). L'elenco completo è disponibile contattando i Contitolari ai recapiti indicati.</p>
+      <p class="privacy-p">I dati personali possono essere condivisi con fornitori di servizi strettamente correlati e funzionali alle attività dei Contitolari (a titolo esemplificativo: provider di hosting e di servizi tecnici di gestione del sito). È possibile ottenere l'elenco completo contattando i Contitolari agli indirizzi sopra indicati.</p>
     </div>
 
     <!-- Diritti -->
     <div class="privacy-sezione">
-      <h2 class="privacy-h2">Diritti dell'interessato</h2>
-      <p class="privacy-p">In qualità di interessato, Lei potrà esercitare i seguenti diritti nei confronti dei Contitolari:</p>
-
-      <ul class="privacy-diritti">
-        <li><em>Accesso</em> (art. 15) — ottenere conferma del trattamento in corso e accedere ai propri dati.</li>
-        <li><em>Rettifica</em> (art. 16) — ottenere la correzione di dati inesatti o l'integrazione di quelli incompleti.</li>
-        <li><em>Cancellazione</em> (art. 17) — ottenere la cancellazione dei dati, salvo eccezioni di legge.</li>
-        <li><em>Limitazione</em> (art. 18) — ottenere la limitazione del trattamento in specifiche circostanze.</li>
-        <li><em>Portabilità</em> (art. 20) — ricevere i propri dati in formato strutturato e trasmetterli a un altro titolare.</li>
-        <li><em>Opposizione</em> (art. 21) — opporsi al trattamento basato su legittimo interesse.</li>
-        <li><em>Non essere sottoposto a decisioni automatizzate</em> (art. 22).</li>
-        <li><em>Reclamo al Garante</em> — <a href="http://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a></li>
-        <li><em>Revoca del consenso</em> — in qualsiasi momento e con la stessa facilità con cui è stato prestato.</li>
+      <h2 class="privacy-h2">Diritti dell'interessato — reclamo all'autorità di controllo</h2>
+      <p class="privacy-p">In relazione ai trattamenti descritti nella presente Informativa, in qualità di interessato Lei potrà, alle condizioni previste dal GDPR, esercitare i diritti sanciti dagli articoli da 15 a 22 del GDPR e, in particolare, i seguenti diritti:</p>
+      <ul class="privacy-lista">
+        <li><strong style="font-weight:400;">diritto di accesso – articolo 15 GDPR:</strong> diritto di ottenere conferma che sia o meno in corso un trattamento di dati personali che La riguardano e, in tal caso, ottenere l'accesso ai Suoi dati personali;</li>
+        <li><strong style="font-weight:400;">diritto di rettifica – articolo 16 GDPR:</strong> diritto di ottenere, senza ingiustificato ritardo, la rettifica dei dati personali inesatti che La riguardano e/o l'integrazione dei dati personali incompleti;</li>
+        <li><strong style="font-weight:400;">diritto alla cancellazione (diritto all'oblio) – articolo 17 GDPR:</strong> diritto di ottenere, senza ingiustificato ritardo, la cancellazione dei dati personali che La riguardano. Il diritto alla cancellazione non si applica nella misura in cui il trattamento sia necessario per l'adempimento di un obbligo legale o per l'esecuzione di un compito svolto nel pubblico interesse o per l'accertamento, l'esercizio o la difesa di un diritto in sede giudiziaria;</li>
+        <li><strong style="font-weight:400;">diritto di limitazione di trattamento – articolo 18 GDPR:</strong> diritto di ottenere la limitazione del trattamento, quando: a) l'interessato contesta l'esattezza dei dati personali; b) il trattamento è illecito e l'interessato si oppone alla cancellazione dei dati personali e chiede invece che ne sia limitato l'utilizzo; c) i dati personali sono necessari all'interessato per l'accertamento, l'esercizio o la difesa di un diritto in sede giudiziaria; d) l'interessato si è opposto al trattamento in attesa della verifica in merito all'eventuale prevalenza dei motivi legittimi del titolare del trattamento rispetto a quelli dell'interessato;</li>
+        <li><strong style="font-weight:400;">diritto alla portabilità dei dati – articolo 20 GDPR:</strong> diritto di ricevere, in un formato strutturato, di uso comune e leggibile da un dispositivo automatico, i dati personali che La riguardano forniti ai Contitolari e il diritto di trasmetterli a un altro titolare senza impedimenti, qualora il trattamento si basi sul consenso e sia effettuato con mezzi automatizzati. Inoltre, il diritto di ottenere che i Suoi dati personali siano trasmessi direttamente dai Contitolari ad altro titolare qualora ciò sia tecnicamente fattibile;</li>
+        <li><strong style="font-weight:400;">diritto di opposizione – articolo 21 GDPR:</strong> diritto di opporsi, in qualsiasi momento, al trattamento dei dati personali che La riguardano basati sulla condizione di legittimità del legittimo interesse, compresa la profilazione, salvo che sussistano motivi legittimi per i Contitolari di continuare il trattamento che prevalgono sugli interessi, sui diritti e sulle libertà dell'interessato oppure per l'accertamento, l'esercizio o la difesa di un diritto in sede giudiziaria;</li>
+        <li><strong style="font-weight:400;">diritto a non essere sottoposto a un processo decisionale automatizzato – articolo 22 GDPR:</strong> l'interessato ha il diritto di non essere sottoposto a una decisione basata unicamente sul trattamento automatizzato, compresa la profilazione, che produca effetti giuridici che lo riguardano o che incida in modo analogo significativamente sulla sua persona, salvo che ciò sia necessario per la conclusione o esecuzione di un contratto o Lei abbia rilasciato il Suo consenso. In ogni caso, un processo decisionale automatizzato non potrà riguardare i Suoi dati personali e Lei potrà in ogni momento ottenere l'intervento umano da parte dei Contitolari del trattamento, esprimere la propria opinione e contestare la decisione;</li>
+        <li><strong style="font-weight:400;">diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali:</strong> <a href="http://www.garanteprivacy.it" target="_blank" rel="noopener">http://www.garanteprivacy.it</a>;</li>
+        <li><strong style="font-weight:400;">revocare il consenso</strong> prestato in ogni occasione e con la stessa facilità con cui è stato fornito senza pregiudicare la liceità del trattamento basata sul consenso prestato prima della revoca.</li>
       </ul>
-
-      <p class="privacy-p">L'esercizio dei diritti è gratuito (art. 12 GDPR), salvo richieste manifestamente infondate o eccessive. I Contitolari potranno richiedere ulteriori informazioni per verificare l'identità dell'interessato.</p>
+      <p class="privacy-p">I diritti di cui sopra potranno essere esercitati, nei confronti dei Contitolari, contattando i riferimenti sopra indicati. Ai sensi dell'art. 26, par. 3, del GDPR, l'interessato può esercitare i propri diritti nei confronti di e contro ciascuno dei Contitolari.</p>
+      <p class="privacy-p">L'esercizio dei Suoi diritti in qualità di interessato è gratuito ai sensi dell'articolo 12 GDPR. Tuttavia, nel caso di richieste manifestamente infondate o eccessive, anche per la loro ripetitività, i Contitolari potrebbero addebitarle un contributo spese ragionevole, alla luce dei costi amministrativi sostenuti per gestire la Sua richiesta, o negare la soddisfazione della sua richiesta.</p>
+      <p class="privacy-p">La informiamo, infine, che i Contitolari potranno richiedere ulteriori informazioni necessarie a confermare l'identità dell'interessato.</p>
     </div>
 
   </div>
