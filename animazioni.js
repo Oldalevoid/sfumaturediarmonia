@@ -10,10 +10,10 @@
   banner.id = 'cookie-banner';
   banner.innerHTML = `
     <p class="cookie-testo">
-      Questo sito utilizza esclusivamente cookie tecnici strettamente necessari
-      al suo funzionamento. Non vengono raccolti dati personali, non sono presenti
-      cookie di profilazione o di terze parti. I font sono caricati localmente
-      e nessuna richiesta viene inviata a servizi esterni.
+      Il sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento delle pagine
+      e alla fruizione dei servizi richiesti dall'utente. Per tali cookie non è richiesto il consenso
+      dell'interessato, ai sensi dell'art. 122 del D.lgs. 196/2003 e delle Linee guida cookie del Garante.
+      Non vengono utilizzati cookie di profilazione.
     </p>
     <button class="cookie-btn" id="cookie-ok">Ho capito</button>
   `;
